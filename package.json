@@ -1,13 +1,13 @@
 {
-  "name": "appwrite-error-i18n",
+  "name": "appwrite-errors-i18n",
   "type": "module",
   "version": "1.6.0",
   "keywords": [
     "appwrite",
     "i18n",
-    "error"
+    "errors"
   ],
-  "main": "dist/appwrite-error-i18n.js",
+  "main": "dist/appwrite-errors-i18n.js",
   "types": "dist/main.d.ts",
   "files": [
     "./package.json",
