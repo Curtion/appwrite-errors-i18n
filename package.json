@@ -9,6 +9,10 @@
   ],
   "main": "dist/appwrite-errors-i18n.js",
   "types": "dist/main.d.ts",
+  "files": [
+    "./package.json",
+    "dist/"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
