@@ -16,6 +16,6 @@ const translation = new Translation('zh-CN')
 try {
   // appwrite api
 } catch (error) {
-  const result = translation.parse(error)
+  const result = translation.parse(error.type)
 }
 ```

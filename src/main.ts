@@ -4,11 +4,6 @@ type Language = 'zh-CN'
 interface LanguageMap {
   'zh-CN': typeof zh_CN
 }
-interface Message {
-  name: string
-  description: string
-  code: 500
-}
 
 export default class Translation {
   private language
@@ -20,8 +15,8 @@ export default class Translation {
     this.language = language
   }
 
-  public parse(data: Message) {
+  public parse(type: string) {
     const language = this.languageMap[this.language]
-    return language.filter(item => item.name === data.name && item.code === data.code)
+    return language.find(item => item.name === type)?.description
   }
 }
