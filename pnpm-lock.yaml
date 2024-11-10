@@ -20,6 +20,9 @@ importers:
       eslint:
         specifier: ^9.14.0
         version: 9.14.0
+      php-parser:
+        specifier: ^3.2.0
+        version: 3.2.0
       typescript:
         specifier: ~5.6.2
         version: 5.6.3
@@ -1512,6 +1515,9 @@ packages:
 
   pathe@1.1.2:
     resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
+
+  php-parser@3.2.0:
+    resolution: {integrity: sha512-HCjPJKnxt2Wse06CZ/qBElEetAXRq7+t7tvEa3QF5DUX0n66PYCObsQKGIReUSSmOnePcweDJO3+f2GsC+KuGQ==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -3560,6 +3566,8 @@ snapshots:
   path-parse@1.0.7: {}
 
   pathe@1.1.2: {}
+
+  php-parser@3.2.0: {}
 
   picocolors@1.1.1: {}
 

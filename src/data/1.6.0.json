@@ -1,0 +1,957 @@
+[
+  {
+    "name": "general_unknown",
+    "description": "An unknown error has occurred. Please check the logs for more information.",
+    "code": 500
+  },
+  {
+    "name": "general_mock",
+    "description": "General errors thrown by the mock controller used for testing.",
+    "code": 400
+  },
+  {
+    "name": "general_access_forbidden",
+    "description": "Access to this API is forbidden.",
+    "code": 401
+  },
+  {
+    "name": "general_unknown_origin",
+    "description": "The request originated from an unknown origin. If you trust this domain, please list it as a trusted platform in the Appwrite console.",
+    "code": 403
+  },
+  {
+    "name": "general_api_disabled",
+    "description": "The requested API is disabled. You can enable the API from the Appwrite console.",
+    "code": 403
+  },
+  {
+    "name": "general_service_disabled",
+    "description": "The requested service is disabled. You can enable the service from the Appwrite console.",
+    "code": 403
+  },
+  {
+    "name": "general_unauthorized_scope",
+    "description": "The current user or API key does not have the required scopes to access the requested resource.",
+    "code": 401
+  },
+  {
+    "name": "general_rate_limit_exceeded",
+    "description": "Rate limit for the current endpoint has been exceeded. Please try again after some time.",
+    "code": 429
+  },
+  {
+    "name": "general_smtp_disabled",
+    "description": "SMTP is disabled on your Appwrite instance. You can <a href=\"/docs/email-delivery\">learn more about setting up SMTP</a> in our docs.",
+    "code": 503
+  },
+  {
+    "name": "general_phone_disabled",
+    "description": "Phone provider is not configured. Please check the _APP_SMS_PROVIDER environment variable of your Appwrite server.",
+    "code": 503
+  },
+  {
+    "name": "general_argument_invalid",
+    "description": "The request contains one or more invalid arguments. Please refer to the endpoint documentation.",
+    "code": 400
+  },
+  {
+    "name": "general_query_limit_exceeded",
+    "description": "Query limit exceeded for the current attribute. Usage of more than 100 query values on a single attribute is prohibited.",
+    "code": 400
+  },
+  {
+    "name": "general_query_invalid",
+    "description": "The query's syntax is invalid. Please check the query and try again.",
+    "code": 400
+  },
+  {
+    "name": "general_route_not_found",
+    "description": "The requested route was not found. Please refer to the API docs and try again.",
+    "code": 404
+  },
+  {
+    "name": "general_cursor_not_found",
+    "description": "The cursor is invalid. This can happen if the item represented by the cursor has been deleted.",
+    "code": 400
+  },
+  {
+    "name": "general_server_error",
+    "description": "An internal server error occurred.",
+    "code": 500
+  },
+  {
+    "name": "general_protocol_unsupported",
+    "description": "The request cannot be fulfilled with the current protocol. Please check the value of the _APP_OPTIONS_FORCE_HTTPS environment variable.",
+    "code": 426
+  },
+  {
+    "name": "general_codes_disabled",
+    "description": "Invitation codes are disabled on this server. Please contact the server administrator.",
+    "code": 500
+  },
+  {
+    "name": "general_usage_disabled",
+    "description": "Usage stats is not configured. Please check the value of the _APP_USAGE_STATS environment variable of your Appwrite server.",
+    "code": 501
+  },
+  {
+    "name": "general_not_implemented",
+    "description": "This method was not fully implemented yet. If you believe this is a mistake, please upgrade your Appwrite server version.",
+    "code": 405
+  },
+  {
+    "name": "general_invalid_email",
+    "description": "Value must be a valid email address.",
+    "code": 400
+  },
+  {
+    "name": "general_invalid_phone",
+    "description": "Value must be a valid phone number. Format this number with a leading '+' and a country code, e.g., +16175551212.",
+    "code": 400
+  },
+  {
+    "name": "general_region_access_denied",
+    "description": "Your location is not supported due to legal requirements.",
+    "code": 451
+  },
+  {
+    "name": "general_bad_request",
+    "description": "There was an error processing your request. Please check the inputs and try again.",
+    "code": 400
+  },
+  {
+    "name": "user_count_exceeded",
+    "description": "The current project has exceeded the maximum number of users. Please check your user limit in the Appwrite console.",
+    "code": 400
+  },
+  {
+    "name": "user_console_count_exceeded",
+    "description": "Sign up to the console is restricted. You can contact an administrator to update console sign up restrictions by setting _APP_CONSOLE_WHITELIST_ROOT to \"disabled\".",
+    "code": 501
+  },
+  {
+    "name": "user_jwt_invalid",
+    "description": "The JWT token is invalid. Please check the value of the X-Appwrite-JWT header to ensure the correct token is being used.",
+    "code": 401
+  },
+  {
+    "name": "user_already_exists",
+    "description": "A user with the same id, email, or phone already exists in this project.",
+    "code": 409
+  },
+  {
+    "name": "user_blocked",
+    "description": "The current user has been blocked. You can unblock the user by making a request to the User API's \"Update User Status\" endpoint or in the Appwrite Console's Auth section.",
+    "code": 401
+  },
+  {
+    "name": "user_invalid_token",
+    "description": "Invalid token passed in the request.",
+    "code": 401
+  },
+  {
+    "name": "user_password_reset_required",
+    "description": "The current user requires a password reset.",
+    "code": 412
+  },
+  {
+    "name": "user_email_not_whitelisted",
+    "description": "Console registration is restricted to specific emails. Contact your administrator for more information.",
+    "code": 401
+  },
+  {
+    "name": "user_invalid_code",
+    "description": "The specified code is not valid. Contact your administrator for more information.",
+    "code": 401
+  },
+  {
+    "name": "user_ip_not_whitelisted",
+    "description": "Console registration is restricted to specific IPs. Contact your administrator for more information.",
+    "code": 401
+  },
+  {
+    "name": "user_invalid_credentials",
+    "description": "Invalid credentials. Please check the email and password.",
+    "code": 401
+  },
+  {
+    "name": "user_anonymous_console_prohibited",
+    "description": "Anonymous users cannot be created for the console project.",
+    "code": 401
+  },
+  {
+    "name": "user_session_already_exists",
+    "description": "Creation of a session is prohibited when a session is active.",
+    "code": 401
+  },
+  {
+    "name": "user_not_found",
+    "description": "User with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "user_email_already_exists",
+    "description": "A user with the same email already exists in the current project.",
+    "code": 409
+  },
+  {
+    "name": "user_password_mismatch",
+    "description": "Passwords do not match. Please check the password and confirm password.",
+    "code": 400
+  },
+  {
+    "name": "user_password_recently_used",
+    "description": "The password you are trying to use is similar to your previous password. For your security, please choose a different password and try again.",
+    "code": 400
+  },
+  {
+    "name": "user_password_personal_data",
+    "description": "The password you are trying to use contains references to your name, email, phone or userID. For your security, please choose a different password and try again.",
+    "code": 400
+  },
+  {
+    "name": "user_session_not_found",
+    "description": "The current user session could not be found.",
+    "code": 404
+  },
+  {
+    "name": "user_identity_not_found",
+    "description": "The identity could not be found. Please sign in with OAuth provider to create identity first.",
+    "code": 404
+  },
+  {
+    "name": "user_unauthorized",
+    "description": "The current user is not authorized to perform the requested action.",
+    "code": 401
+  },
+  {
+    "name": "user_auth_method_unsupported",
+    "description": "The requested authentication method is either disabled or unsupported. Please check the supported authentication methods in the Appwrite console.",
+    "code": 501
+  },
+  {
+    "name": "user_phone_already_exists",
+    "description": "A user with the same phone number already exists in the current project.",
+    "code": 409
+  },
+  {
+    "name": "user_recovery_codes_already_exists",
+    "description": "The current user already generated recovery codes and they can only be read once for security reasons.",
+    "code": 409
+  },
+  {
+    "name": "user_authenticator_not_found",
+    "description": "Authenticator could not be found on the current user.",
+    "code": 404
+  },
+  {
+    "name": "user_recovery_codes_not_found",
+    "description": "Recovery codes could not be found on the current user.",
+    "code": 404
+  },
+  {
+    "name": "user_authenticator_already_verified",
+    "description": "This authenticator is already verified on the current user.",
+    "code": 409
+  },
+  {
+    "name": "user_phone_not_found",
+    "description": "The current user does not have a phone number associated with their account.",
+    "code": 400
+  },
+  {
+    "name": "user_missing_id",
+    "description": "Missing ID from OAuth2 provider.",
+    "code": 400
+  },
+  {
+    "name": "user_more_factors_required",
+    "description": "More factors are required to complete the sign in process.",
+    "code": 401
+  },
+  {
+    "name": "user_challenge_required",
+    "description": "A recently successful challenge is required to complete this action. A challenge is considered recent for 5 minutes.",
+    "code": 401
+  },
+  {
+    "name": "user_oauth2_bad_request",
+    "description": "OAuth2 provider rejected the bad request.",
+    "code": 400
+  },
+  {
+    "name": "user_oauth2_unauthorized",
+    "description": "OAuth2 provider rejected the unauthorized request.",
+    "code": 401
+  },
+  {
+    "name": "user_oauth2_provider_error",
+    "description": "OAuth2 provider returned some error.",
+    "code": 424
+  },
+  {
+    "name": "user_email_already_verified",
+    "description": "User email is already verified",
+    "code": 409
+  },
+  {
+    "name": "user_phone_already_verified",
+    "description": "User phone is already verified",
+    "code": 409
+  },
+  {
+    "name": "user_deletion_prohibited",
+    "description": "User deletion is not allowed for users with active memberships. Please delete all confirmed memberships before deleting the account.",
+    "code": 400
+  },
+  {
+    "name": "user_target_not_found",
+    "description": "The target could not be found.",
+    "code": 404
+  },
+  {
+    "name": "user_target_already_exists",
+    "description": "A target with the same ID already exists.",
+    "code": 409
+  },
+  {
+    "name": "user_api_key_and_session_set",
+    "description": "API key and session used in the same request. Use either `setSession` or `setKey`. Learn about which authentication method to use in the SSR docs: https://appwrite.io/docs/products/auth/server-side-rendering",
+    "code": 403
+  },
+  {
+    "name": "api_key_expired",
+    "description": "The dynamic API key has expired. Please don't use dynamic API keys for more than duration of the execution.",
+    "code": 401
+  },
+  {
+    "name": "team_not_found",
+    "description": "Team with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "team_invite_already_exists",
+    "description": "User has already been invited or is already a member of this team",
+    "code": 409
+  },
+  {
+    "name": "team_invite_not_found",
+    "description": "The requested team invitation could not be found.",
+    "code": 404
+  },
+  {
+    "name": "team_invalid_secret",
+    "description": "The team invitation secret is invalid. Please request  a new invitation and try again.",
+    "code": 401
+  },
+  {
+    "name": "team_membership_mismatch",
+    "description": "The membership ID does not belong to the team ID.",
+    "code": 404
+  },
+  {
+    "name": "team_invite_mismatch",
+    "description": "The invite does not belong to the current user.",
+    "code": 401
+  },
+  {
+    "name": "team_already_exists",
+    "description": "Team with requested ID already exists. Please choose a different ID and try again.",
+    "code": 409
+  },
+  {
+    "name": "membership_not_found",
+    "description": "Membership with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "membership_already_confirmed",
+    "description": "Membership is already confirmed.",
+    "code": 409
+  },
+  {
+    "name": "avatar_set_not_found",
+    "description": "The requested avatar set could not be found.",
+    "code": 404
+  },
+  {
+    "name": "avatar_not_found",
+    "description": "The request avatar could not be found.",
+    "code": 404
+  },
+  {
+    "name": "avatar_image_not_found",
+    "description": "The requested image was not found at the URL.",
+    "code": 404
+  },
+  {
+    "name": "avatar_remote_url_failed",
+    "description": "Failed to fetch favicon from the requested URL.",
+    "code": 404
+  },
+  {
+    "name": "avatar_icon_not_found",
+    "description": "The requested favicon could not be found.",
+    "code": 404
+  },
+  {
+    "name": "storage_file_already_exists",
+    "description": "A storage file with the requested ID already exists.",
+    "code": 409
+  },
+  {
+    "name": "storage_file_not_found",
+    "description": "The requested file could not be found.",
+    "code": 404
+  },
+  {
+    "name": "storage_device_not_found",
+    "description": "The requested storage device could not be found.",
+    "code": 400
+  },
+  {
+    "name": "storage_file_empty",
+    "description": "Empty file passed to the endpoint.",
+    "code": 400
+  },
+  {
+    "name": "storage_file_type_unsupported",
+    "description": "The given file extension is not supported.",
+    "code": 400
+  },
+  {
+    "name": "storage_invalid_file_size",
+    "description": "The file size is either not valid or exceeds the maximum allowed size. Please check the file or the value of the _APP_STORAGE_LIMIT environment variable.",
+    "code": 400
+  },
+  {
+    "name": "storage_invalid_file",
+    "description": "The uploaded file is invalid. Please check the file and try again.",
+    "code": 403
+  },
+  {
+    "name": "storage_bucket_already_exists",
+    "description": "A storage bucket with the requested ID already exists. Try again with a different ID or use ID.unique() to generate a unique ID.",
+    "code": 409
+  },
+  {
+    "name": "storage_bucket_not_found",
+    "description": "Storage bucket with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "storage_invalid_content_range",
+    "description": "The content range is invalid. Please check the value of the Content-Range header.",
+    "code": 400
+  },
+  {
+    "name": "storage_invalid_range",
+    "description": "The requested range is not satisfiable. Please check the value of the Range header.",
+    "code": 416
+  },
+  {
+    "name": "storage_invalid_appwrite_id",
+    "description": "The value for x-appwrite-id header is invalid. Please check the value of the x-appwrite-id header is a valid id and not unique().",
+    "code": 400
+  },
+  {
+    "name": "storage_file_not_public",
+    "description": "The requested file is not publicly readable.",
+    "code": 403
+  },
+  {
+    "name": "installation_not_found",
+    "description": "Installation with the requested ID could not be found. Check to see if the ID is correct, or create the installation.",
+    "code": 404
+  },
+  {
+    "name": "provider_repository_not_found",
+    "description": "VCS (Version Control System) repository with the requested ID could not be found. Check to see if the ID is correct, and if it belongs to installationId you provided.",
+    "code": 404
+  },
+  {
+    "name": "repository_not_found",
+    "description": "Repository with the requested ID could not be found. Check to see if the ID is correct, or create the repository.",
+    "code": 404
+  },
+  {
+    "name": "provider_contribution_conflict",
+    "description": "External contribution is already authorized.",
+    "code": 409
+  },
+  {
+    "name": "general_provider_failure",
+    "description": "VCS (Version Control System) provider failed to process the request. We believe this is an error with the VCS provider. Try again, or contact support for more information.",
+    "code": 400
+  },
+  {
+    "name": "function_not_found",
+    "description": "Function with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "function_runtime_unsupported",
+    "description": "The requested runtime is either inactive or unsupported. Please check the value of the _APP_FUNCTIONS_RUNTIMES environment variable.",
+    "code": 404
+  },
+  {
+    "name": "function_runtime_unsupported",
+    "description": "Entrypoint for your Appwrite Function is missing. Please specify it when making deployment or update the entrypoint under your function's \"Settings\" > \"Configuration\" > \"Entrypoint\".",
+    "code": 404
+  },
+  {
+    "name": "function_synchronous_timeout",
+    "description": "Synchronous function execution timed out. Use asynchronous execution instead, or ensure the execution duration doesn't exceed 30 seconds.",
+    "code": 408
+  },
+  {
+    "name": "function_template_not_found",
+    "description": "Function Template with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "build_not_found",
+    "description": "Build with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "build_not_ready",
+    "description": "Build with the requested ID is building and not ready for execution.",
+    "code": 400
+  },
+  {
+    "name": "build_in_progress",
+    "description": "Build with the requested ID is already in progress. Please wait before you can retry.",
+    "code": 400
+  },
+  {
+    "name": "build_already_completed",
+    "description": "Build with the requested ID is already completed and cannot be canceled.",
+    "code": 400
+  },
+  {
+    "name": "deployment_not_found",
+    "description": "Deployment with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "execution_not_found",
+    "description": "Execution with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "execution_in_progress",
+    "description": "Can't delete ongoing execution. Please wait for execution to finish before deleting it.",
+    "code": 400
+  },
+  {
+    "name": "database_not_found",
+    "description": "Database not found",
+    "code": 404
+  },
+  {
+    "name": "database_already_exists",
+    "description": "Database already exists",
+    "code": 409
+  },
+  {
+    "name": "database_timeout",
+    "description": "Database timed out. Try adjusting your queries or adding an index.",
+    "code": 408
+  },
+  {
+    "name": "collection_not_found",
+    "description": "Collection with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "collection_already_exists",
+    "description": "A collection with the requested ID already exists. Try again with a different ID or use ID.unique() to generate a unique ID.",
+    "code": 409
+  },
+  {
+    "name": "collection_limit_exceeded",
+    "description": "The maximum number of collections has been reached.",
+    "code": 400
+  },
+  {
+    "name": "document_not_found",
+    "description": "Document with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "document_invalid_structure",
+    "description": "The document structure is invalid. Please ensure the attributes match the collection definition.",
+    "code": 400
+  },
+  {
+    "name": "document_missing_data",
+    "description": "The document data is missing. Try again with document data populated",
+    "code": 400
+  },
+  {
+    "name": "document_missing_payload",
+    "description": "The document data and permissions are missing. You must provide either document data or permissions to be updated.",
+    "code": 400
+  },
+  {
+    "name": "document_already_exists",
+    "description": "Document with the requested ID already exists. Try again with a different ID or use ID.unique() to generate a unique ID.",
+    "code": 409
+  },
+  {
+    "name": "document_update_conflict",
+    "description": "Remote document is newer than local.",
+    "code": 409
+  },
+  {
+    "name": "document_delete_restricted",
+    "description": "Document cannot be deleted because it is referenced by another document.",
+    "code": 403
+  },
+  {
+    "name": "attribute_not_found",
+    "description": "Attribute with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "attribute_unknown",
+    "description": "The attribute required for the index could not be found. Please confirm all your attributes are in the available state.",
+    "code": 400
+  },
+  {
+    "name": "attribute_not_available",
+    "description": "The requested attribute is not yet available. Please try again later.",
+    "code": 400
+  },
+  {
+    "name": "attribute_format_unsupported",
+    "description": "The requested attribute format is not supported.",
+    "code": 400
+  },
+  {
+    "name": "attribute_default_unsupported",
+    "description": "Default values cannot be set for array or required attributes.",
+    "code": 400
+  },
+  {
+    "name": "attribute_already_exists",
+    "description": "Attribute with the requested key already exists. Attribute keys must be unique, try again with a different key.",
+    "code": 409
+  },
+  {
+    "name": "attribute_limit_exceeded",
+    "description": "The maximum number of attributes has been reached.",
+    "code": 400
+  },
+  {
+    "name": "attribute_value_invalid",
+    "description": "The attribute value is invalid. Please check the type, range and value of the attribute.",
+    "code": 400
+  },
+  {
+    "name": "attribute_type_invalid",
+    "description": "The attribute type is invalid.",
+    "code": 400
+  },
+  {
+    "name": "relationship_value_invalid",
+    "description": "The relationship value is invalid.",
+    "code": 400
+  },
+  {
+    "name": "attribute_invalid_resize",
+    "description": "Existing data is too large for new size, truncate your existing data then try again.",
+    "code": 400
+  },
+  {
+    "name": "index_not_found",
+    "description": "Index with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "index_limit_exceeded",
+    "description": "The maximum number of indexes has been reached.",
+    "code": 400
+  },
+  {
+    "name": "index_already_exists",
+    "description": "Index with the requested key already exists. Try again with a different key.",
+    "code": 409
+  },
+  {
+    "name": "index_invalid",
+    "description": "Index invalid.",
+    "code": 400
+  },
+  {
+    "name": "project_not_found",
+    "description": "Project with the requested ID could not be found. Please check the value of the X-Appwrite-Project header to ensure the correct project ID is being used.",
+    "code": 404
+  },
+  {
+    "name": "project_already_exists",
+    "description": "Project with the requested ID already exists. Try again with a different ID or use ID.unique() to generate a unique ID.",
+    "code": 409
+  },
+  {
+    "name": "project_provider_disabled",
+    "description": "The chosen OAuth provider is disabled. You can enable the OAuth provider using the Appwrite console.",
+    "code": 412
+  },
+  {
+    "name": "project_provider_unsupported",
+    "description": "The chosen OAuth provider is unsupported. Please check the <a href=\"/docs/client/account?sdk=web-default#accountCreateOAuth2Session\">Create OAuth2 Session docs</a> for the complete list of supported OAuth providers.",
+    "code": 400
+  },
+  {
+    "name": "project_invalid_success_url",
+    "description": "Invalid redirect URL for OAuth success.",
+    "code": 400
+  },
+  {
+    "name": "project_invalid_failure_url",
+    "description": "Invalid redirect URL for OAuth failure.",
+    "code": 400
+  },
+  {
+    "name": "project_reserved_project",
+    "description": "The project ID is reserved. Please choose another project ID.",
+    "code": 400
+  },
+  {
+    "name": "project_key_expired",
+    "description": "The project key has expired. Please generate a new key using the Appwrite console.",
+    "code": 401
+  },
+  {
+    "name": "router_host_not_found",
+    "description": "Host is not trusted. This could occur because you have not configured a custom domain. Add a custom domain to your project first and try again.",
+    "code": 404
+  },
+  {
+    "name": "router_domain_not_configured",
+    "description": "_APP_DOMAIN, _APP_DOMAIN_TARGET, and _APP_DOMAIN_FUNCTIONS environment variables have not been configured. Please configure the domain environment variables before accessing the Appwrite Console via any IP address or hostname other than localhost. This value could be an IP like 203.0.113.0 or a hostname like example.com.",
+    "code": 500
+  },
+  {
+    "name": "rule_resource_not_found",
+    "description": "Resource could not be found. Please check if the resourceId and resourceType are correct, or if the resource actually exists.",
+    "code": 404
+  },
+  {
+    "name": "rule_not_found",
+    "description": "Rule with the requested ID could not be found. Please check if the ID provided is correct or if the rule actually exists.",
+    "code": 404
+  },
+  {
+    "name": "rule_already_exists",
+    "description": "Domain is already used. Please try again with a different domain.",
+    "code": 409
+  },
+  {
+    "name": "rule_verification_failed",
+    "description": "Domain verification failed. Please check if your DNS records are correct and try again.",
+    "code": 401
+  },
+  {
+    "name": "project_smtp_config_invalid",
+    "description": "Provided SMTP config is invalid. Please check the configured values and try again.",
+    "code": 400
+  },
+  {
+    "name": "project_template_default_deletion",
+    "description": "You can't delete default template. If you are trying to reset your template changes, you can ignore this error as it's already been reset.",
+    "code": 401
+  },
+  {
+    "name": "project_region_unsupported",
+    "description": "The requested region is either inactive or unsupported. Please check the value of the _APP_REGIONS environment variable.",
+    "code": 400
+  },
+  {
+    "name": "webhook_not_found",
+    "description": "Webhook with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "key_not_found",
+    "description": "Key with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "platform_not_found",
+    "description": "Platform with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "variable_not_found",
+    "description": "Variable with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "variable_already_exists",
+    "description": "Variable with the same ID already exists in this project. Try again with a different ID.",
+    "code": 409
+  },
+  {
+    "name": "graphql_no_query",
+    "description": "Param \"query\" is not optional.",
+    "code": 400
+  },
+  {
+    "name": "graphql_too_many_queries",
+    "description": "Too many queries.",
+    "code": 400
+  },
+  {
+    "name": "migration_not_found",
+    "description": "Migration with the requested ID could not be found. Please verify that the provided ID is correct and try again.",
+    "code": 404
+  },
+  {
+    "name": "migration_already_exists",
+    "description": "Migration with the requested ID already exists. Try again with a different ID.",
+    "code": 409
+  },
+  {
+    "name": "migration_in_progress",
+    "description": "Migration is already in progress. You can check the status of the migration in your Appwrite Console's \"Settings\" > \"Migrations\".",
+    "code": 409
+  },
+  {
+    "name": "realtime_message_format_invalid",
+    "description": "Message format is not valid.",
+    "code": 1003
+  },
+  {
+    "name": "realtime_policy_violation",
+    "description": "Policy violation.",
+    "code": 1008
+  },
+  {
+    "name": "realtime_too_many_messages",
+    "description": "Too many messages.",
+    "code": 1013
+  },
+  {
+    "name": "migration_provider_error",
+    "description": "An error occurred on the provider's side. Please try again later.",
+    "code": 400
+  },
+  {
+    "name": "health_queue_size_exceeded",
+    "description": "Queue size threshold hit.",
+    "code": 503
+  },
+  {
+    "name": "health_certificate_expired",
+    "description": "The SSL certificate for the specified domain has expired and is no longer valid.",
+    "code": 404
+  },
+  {
+    "name": "health_invalid_host",
+    "description": "Failed to establish a connection to the specified domain. Please verify the domain name and ensure that the server is running and accessible.",
+    "code": 404
+  },
+  {
+    "name": "provider_not_found",
+    "description": "Provider with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "provider_already_exists",
+    "description": "Provider with the requested ID already exists.",
+    "code": 409
+  },
+  {
+    "name": "provider_incorrect_type",
+    "description": "Provider with the requested ID is of the incorrect type.",
+    "code": 400
+  },
+  {
+    "name": "provider_missing_credentials",
+    "description": "Provider with the requested ID is missing credentials.",
+    "code": 400
+  },
+  {
+    "name": "topic_not_found",
+    "description": "Topic with the request ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "topic_already_exists",
+    "description": "Topic with the request ID already exists.",
+    "code": 409
+  },
+  {
+    "name": "subscriber_not_found",
+    "description": "Subscriber with the request ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "subscriber_already_exists",
+    "description": "Subscriber with the request ID already exists.",
+    "code": 409
+  },
+  {
+    "name": "message_not_found",
+    "description": "Message with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "message_missing_target",
+    "description": "Message with the requested ID has no recipients (topics or users or targets).",
+    "code": 400
+  },
+  {
+    "name": "message_already_sent",
+    "description": "Message with the requested ID has already been sent.",
+    "code": 400
+  },
+  {
+    "name": "message_already_processing",
+    "description": "Message with the requested ID is already being processed.",
+    "code": 400
+  },
+  {
+    "name": "message_already_failed",
+    "description": "Message with the requested ID has already failed.",
+    "code": 400
+  },
+  {
+    "name": "message_already_scheduled",
+    "description": "Message with the requested ID has already been scheduled for delivery.",
+    "code": 400
+  },
+  {
+    "name": "message_target_not_email",
+    "description": "Message with the target ID is not an email target.",
+    "code": 400
+  },
+  {
+    "name": "message_target_not_sms",
+    "description": "Message with the target ID is not an SMS target.",
+    "code": 400
+  },
+  {
+    "name": "message_target_not_push",
+    "description": "Message with the target ID is not a push target.",
+    "code": 400
+  },
+  {
+    "name": "message_missing_schedule",
+    "description": "Message can not have status scheduled without a schedule.",
+    "code": 400
+  },
+  {
+    "name": "schedule_not_found",
+    "description": "Schedule with the requested ID could not be found.",
+    "code": 404
+  },
+  {
+    "name": "target_provider_invalid_type",
+    "description": "Target has an invalid provider type.",
+    "code": 400
+  }
+]
