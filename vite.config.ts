@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
-      name: 'appwrite_errors_i18n',
+      name: 'appwrite_i18n',
       formats: ['es', 'umd'],
     },
   },
